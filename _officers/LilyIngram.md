@@ -6,4 +6,4 @@ contact: lingram1@luc.edu
 status: active
 ---
 
-Fourth year student Majoring in Economics and minoring in Mathematics!
+Fourth year student majoring in Economics and minoring in Mathematics.
