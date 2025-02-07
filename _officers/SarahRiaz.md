@@ -1,7 +1,7 @@
 ---
 name: Sarah Riaz
 position: Treasurer
-image:
+image: assets/officers/IMG_SARAH.HEIC
 contact: 
 status: active
 ---
