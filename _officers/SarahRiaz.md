@@ -6,4 +6,4 @@ contact: sriaz@luc.edu
 status: active
 ---
 
-Third year student Majoring in Statistics and Mathematics!
+Third year student majoring in Statistics and Mathematics.
