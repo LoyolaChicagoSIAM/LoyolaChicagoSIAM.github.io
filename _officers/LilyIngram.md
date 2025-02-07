@@ -1,7 +1,7 @@
 ---
 name: Lily Ingram 
 position: President
-image: assets/officers/IMG_LILY.HEIC
+image:
 contact: test@test.com 
 status: active
 ---
