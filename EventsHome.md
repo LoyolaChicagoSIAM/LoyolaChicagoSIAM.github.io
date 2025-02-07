@@ -4,5 +4,5 @@ title: Events
 permalink: /events/
 ---
 
-Pictures and recaps of our past events!
+Here you will find pictures and recaps of our past events!
 
