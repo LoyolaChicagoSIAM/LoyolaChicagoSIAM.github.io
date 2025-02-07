@@ -5,5 +5,6 @@
 layout: home
 ---
 
-Add home page description for the website. Explain what SIAM is and what you do.
+**Welcome to Loyola University Chicago’s SIAM Chapter!**
 
+The Society for Industrial and Applied Mathematics (SIAM) Chapter at Loyola University Chicago is a student-led organization dedicated to promoting applied mathematics and computational science. Our mission is to foster collaboration between students, faculty, and industry professionals while exploring real-world applications of mathematics.
