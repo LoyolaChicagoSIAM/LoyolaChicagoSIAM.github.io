@@ -1,7 +1,7 @@
 ---
 name: Anaum Chaudhry 
 position: Vice President
-image: /assets/officers/IMG_1027.jpg
+image: /assets/officers/IMG_ANAUM.jpeg
 contact:
 status: active
 ---
