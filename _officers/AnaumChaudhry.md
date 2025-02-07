@@ -2,8 +2,8 @@
 name: Anaum Chaudhry 
 position: Vice President
 image: /assets/officers/IMG_ANAUM.jpeg
-contact:
+contact: achaudhry10@luc.edu
 status: active
 ---
 
-Add Bio here if desired. *Hello!*
+I am a second year student majoring in Data Science and minoring in Information Systems!
