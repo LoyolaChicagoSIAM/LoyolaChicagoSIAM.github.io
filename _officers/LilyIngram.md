@@ -2,8 +2,8 @@
 name: Lily Ingram 
 position: President
 image: /assets/officers/IMG_LILY.jpeg
-contact: test@test.com 
+contact: lingram1@luc.edu
 status: active
 ---
 
-Add bio here if wanted
+I am a fourth year student Majoring in Economics and Mathematics!
