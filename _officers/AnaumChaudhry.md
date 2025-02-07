@@ -6,4 +6,4 @@ contact: achaudhry10@luc.edu
 status: active
 ---
 
-I am a second year student majoring in Data Science and minoring in Information Systems!
+Second year student majoring in Data Science and minoring in Information Systems!
