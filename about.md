@@ -13,3 +13,5 @@ Our goal as Loyola University Chicago SIAM Student Chapter is to foster a commun
 
 ### Join Us!
 Whether you're a student majoring in mathematics, data science, engineering, or a related field, our SIAM chapter is the perfect place to grow your skills and network. Become a member today and be part of a thriving community of problem-solvers and innovators! We welcome any student here at LUC!
+
+![alt text](assets/SIAM General Flyer 1.0.pdf)
