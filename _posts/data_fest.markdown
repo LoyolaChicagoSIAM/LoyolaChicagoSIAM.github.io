@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  Sign Up For Data Fest!
-date:   2024-04-04
+date:   2025-04-04
 location: Cuneo Hall 210
 ---
 
