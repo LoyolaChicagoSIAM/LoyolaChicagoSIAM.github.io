@@ -13,4 +13,3 @@ The trip provided a unique chance to witness how high-level research is conducte
 
 <img src="/assets/Event5_pic2.JPG" width="400" style="padding: 10px; display: block;">
 
-<img src="/assets/Event5_pic3.heic" width="400" style="padding: 10px; display: block;">
