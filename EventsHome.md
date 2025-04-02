@@ -4,6 +4,4 @@ title: Events
 permalink: /events/
 ---
 
-![alt text](![teal-siamlogo](https://github.com/user-attachments/assets/44fd6ada-49d1-4a48-a02d-b4cc7bfaaa77))
-
-<img src="/assets/Logo.jpg" width="200" style="float: left; padding: 10px;">
+<img src="/assets/teal-siamlogo.png" width="200" style="float: left; padding: 10px;">
