@@ -11,7 +11,7 @@ The third event was a colloquium featuring Dr. Sven Leyffer from Argonne Nationa
 
 <img src="/assets/Event3_pic3.jpg" width="400" style="padding: 10px; display: block;">
 
-<img src="/assets/Event3_picidk.jpg" width="400" style="padding: 10px; display: block;">
+<img src="/assets/Event3_picidk.png" width="400" style="padding: 10px; display: block;">
 
 <img src="/assets/Event3_pic2.jpg" width="400" style="padding: 10px; display: block;">
 
