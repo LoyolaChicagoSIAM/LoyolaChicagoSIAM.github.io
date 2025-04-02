@@ -1,3 +1,10 @@
+---
+layout: post
+title:  INSuRE Summer 2025 Workshop
+date:   2025-04-11
+---
+
+
 Applications for INSuRE Summer Workshops open!
 
 For information on the workshop topics and application requirements please refer to <https://www.caecommunity.org/community-of-practice/cyber-research/insure-summer-2025-workshop> 
