@@ -2,7 +2,7 @@
 layout: event 
 title: Argonne National Lab Trip
 date: 2025/03/29
-location: Event Location goes here
+location: Argonne National Lab
 ---
 
 Students gathered and traveled together to Argonne National Laboratory for an educational and insightful visit. During the trip, they participated in a guided tour of the lab, exploring various research facilities and gaining first hand exposure to advanced scientific equipment. Argonne is renowned for its work in areas like energy, materials science, nuclear physics, and environmental science, and the students had the opportunity to observe cutting-edge technologies used in progressive research.
