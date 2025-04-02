@@ -15,3 +15,17 @@ The trip provided a unique chance to witness how high-level research is conducte
 
 <img src="/assets/new1.png" width="400" style="padding: 10px; display: block;">
 
+<img src="/assets/new2.png" width="400" style="padding: 10px; display: block;">
+
+<img src="/assets/new3.png" width="400" style="padding: 10px; display: block;">
+
+<img src="/assets/new4.png" width="400" style="padding: 10px; display: block;">
+
+<img src="/assets/new5.png" width="400" style="padding: 10px; display: block;">
+
+<img src="/assets/new6.png" width="400" style="padding: 10px; display: block;">
+
+<img src="/assets/Event5_pic7.JPEG" width="400" style="padding: 10px; display: block;">
+
+<img src="/assets/Event5_pic9.jpeg" width="400" style="padding: 10px; display: block;">
+
