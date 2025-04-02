@@ -1,13 +1,23 @@
 ---
 layout: post
-title:  Data Fest!
+title:  Sign Up For Data Fest!
 date:   2024-04-04
-categories: jekyll update
+location: Cuneo Hall 210
 ---
-You’ll find this post in your `_posts` directory. Go ahead and edit it and re-build the site to see your changes. 
 
-Jekyll requires blog post files to be named according to the following format:
+Data Fest is next weekend April 4-6.  Info and sign up link can be found here:   <https://www.luc.edu/datascience/events/datafest/>
 
-`YEAR-MONTH-DAY-title.MARKUP`
+Everyone eats for free and you get a free DataFest LUC t-shirt!
 
-Where `YEAR` is a four-digit number, `MONTH` and `DAY` are both two-digit numbers, and `MARKUP` is the file extension representing the format used in the file. After that, include the necessary front matter. Take a look at the source for this post to get an idea about how it works.
+DataFest is a data "hackathon" for students, founded at UCLA in 2011 to motivate a data-analysis class project, that makes data analysis more fun and meaningful while incentivizing good scientific practice and presentation. Now sponsored by the American Statistical Association, ASA DataFest is run through several host institutions across the country, including right here at Loyola University Chicago!
+
+ASA DataFest @ Loyola Chicago is hosted by the Loyola Department of Mathematics and Statistics, the Loyola Department of Computer Science, and the Loyola Data Science Program.  
+
+Analyze
+ASA DataFest will introduce you to what is likely the richest, most complex dataset you’ve seen so far in your college career. The dataset is provided by a real-life organization and is chosen to provide many avenues of discovery. Students at any stage of their data-science education will find something of interest and will have the opportunity to make an original finding. Students from any major are welcome.
+
+Network
+Mingle with data science professionals who visit DataFest to offer their advice and answer your questions. You’ll also get to meet students from other colleges and universities.
+
+Experience
+Past participants of an ASA DataFest have gone to job interviews and are able to describe how they can overcome technical challenges, explain how they work under time pressure, and can talk about their thoughts on solving real-life data-problems.
