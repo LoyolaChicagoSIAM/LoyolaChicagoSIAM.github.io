@@ -10,3 +10,7 @@ Students gathered and traveled together to Argonne National Laboratory for an ed
 The trip provided a unique chance to witness how high-level research is conducted in a national lab setting. Students learned about the groundbreaking research being carried out in fields such as physics, materials science, and energy, and saw how these innovations are applied in real-world settings. This experience broadened their understanding of applied science, deepened their knowledge of the scientific process, and inspired many to consider future career opportunities in research and development.
 
 <img src="/assets/Event5_pic1.JPEG" width="400" style="padding: 10px; display: block;">
+
+<img src="/assets/Event5_pic2.JPG" width="400" style="padding: 10px; display: block;">
+
+<img src="/assets/Event5_pic3.heic" width="400" style="padding: 10px; display: block;">
