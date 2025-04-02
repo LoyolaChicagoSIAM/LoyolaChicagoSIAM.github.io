@@ -4,4 +4,4 @@ title: Events
 permalink: /events/
 ---
 
-<img src="/assets/teal-siamlogo.png" width="200" style="float: left; padding: 10px;">
+<img src="/assets/Logo.jpg" width="200" style="float: left; padding: 10px;">
