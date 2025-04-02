@@ -14,6 +14,6 @@ Study groups: Check the Navigate student app >Study Buddies< for study groups in
 
 Your professor’s or TA’s office hours are a great place to get help and ask questions!
 
-For more information about SIAM at the national level: <https://www.siam.org/>
+For more information about SIAM at the national level: <https://www.siam.org/programs-initiatives/programs/>
 
 
