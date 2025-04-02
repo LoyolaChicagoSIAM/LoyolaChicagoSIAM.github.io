@@ -9,3 +9,5 @@ This event was held on Pi Day, March 14, 2025. The event began with a discussion
 
 <img src="/assets/PiDayFlyer.jpg" width="400" style="padding: 10px; display: block;">
 
+<img src="/assets/Event4.png" width="400" style="padding: 10px; display: block;">
+
