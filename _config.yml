@@ -23,7 +23,8 @@ email: loyolachicagosiam@gmail.com
 description: >- # this means to ignore newlines until "baseurl:"
   We are Loyola University Chicago's Society for Industrial and Applied Mathematics chapter. We connect students, faculty, and industry professionals through engaging workshops, research collaborations, and real-world problem-solving.
   
-
+social_links:
+  instagram: "https://www.instagram.com/siam_luc"
 
 #DO NOT EDIT FURTHER UNLESS YOU KNOW WHAT YOU ARE DOING
 
