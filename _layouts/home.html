@@ -7,7 +7,59 @@ layout: base
         padding-top: 2em;
         display: flex;
         flex-direction: column;
-        gap: 2em;
+        gap: 3em;
+        max-width: 800px;
+        margin: 0 auto;
+    }
+    
+    .section-heading {
+        background-color: #008080; /* SIAM teal */
+        color: white;
+        padding: 10px 20px;
+        border-radius: 5px;
+        margin: 30px 0 15px 0;
+        font-size: 1.3rem;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+    
+    .post-list {
+        list-style: none;
+        padding: 0;
+    }
+    
+    .post-list li {
+        margin-bottom: 30px;
+        padding-bottom: 20px;
+        border-bottom: 1px solid #eee;
+    }
+    
+    .post-meta {
+        color: #666;
+        font-size: 0.9rem;
+        display: block;
+        margin-bottom: 5px;
+    }
+    
+    .post-link {
+        color: #0066A1; /* SIAM blue */
+        text-decoration: none;
+        font-weight: 600;
+    }
+    
+    .post-link:hover {
+        text-decoration: underline;
+    }
+    
+    @media (max-width: 600px) {
+        .home-content {
+            padding: 1em;
+            gap: 2em;
+        }
+        
+        .section-heading {
+            font-size: 1.1rem;
+            padding: 8px 15px;
+        }
     }
 </style>
 
@@ -21,7 +73,7 @@ layout: base
   <div class="home-content">
     <!-- Posts Section -->
     <div>
-      <h2>UPCOMING EVENTS</h2>
+      <h2 class="section-heading">UPCOMING EVENTS</h2>
       {% if site.paginate %}
         {% assign posts = paginator.posts %}
       {% else %}
@@ -45,12 +97,14 @@ layout: base
           </li>
           {%- endfor -%}
         </ul>
+      {%- else -%}
+        <p>No news posts yet. Check back soon!</p>
       {%- endif -%}
     </div>
 
     <!-- Events Section -->
     <div>
-      <h2>PAST EVENTS</h2>
+      <h2 class="section-heading">PAST EVENTS</h2>
       {% if site.paginate %}
         {% assign events = paginator.events %}
       {% else %}
@@ -60,13 +114,13 @@ layout: base
       {%- if events.size > 0 -%}
         <ul class="post-list">
           {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
-          {% assign sorted_events = events | sort: 'date' | reverse %}
+          {% assign sorted_events = events | sort: 'date' %}
           {%- for event in sorted_events -%}
           <li>
             <span class="post-meta">
               {{ event.date | date: date_format }}
               {%- if event.location -%}
-                &nbsp;- {{ event.location }}
+                • {{ event.location }}
               {%- endif -%}
             </span>
             <h3>
@@ -78,6 +132,8 @@ layout: base
           </li>
           {%- endfor -%}
         </ul>
+      {%- else -%}
+        <p>No upcoming events scheduled. Check back later!</p>
       {%- endif -%}
     </div>
   </div>
