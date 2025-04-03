@@ -60,7 +60,7 @@ layout: base
       {%- if events.size > 0 -%}
         <ul class="post-list">
           {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
-          {% assign sorted_events = events | sort: 'date' %}
+          {% assign sorted_events = events | sort: 'date' | reverse %}
           {%- for event in sorted_events -%}
           <li>
             <span class="post-meta">
