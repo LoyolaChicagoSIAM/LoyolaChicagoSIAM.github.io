@@ -13,7 +13,7 @@ layout: base
     }
     
     .section-heading {
-        background-color: #008080;
+        background-color: #008080; /* SIAM teal */
         color: white;
         padding: 10px 20px;
         border-radius: 5px;
@@ -41,18 +41,13 @@ layout: base
     }
     
     .post-link {
-        color: #0066A1;
+        color: #0066A1; /* SIAM blue */
         text-decoration: none;
         font-weight: 600;
     }
     
     .post-link:hover {
         text-decoration: underline;
-    }
-    
-    .post-content {
-        margin-top: 10px;
-        line-height: 1.5;
     }
     
     @media (max-width: 600px) {
@@ -76,47 +71,49 @@ layout: base
   {{ content }}
 
   <div class="home-content">
-    <!-- Upcoming Events Section -->
+    <!-- Posts Section -->
     <div>
       <h2 class="section-heading">UPCOMING EVENTS</h2>
-      {% assign now = site.time | date: '%Y-%m-%d' %}
-      {% assign upcoming_events = site.events | where_exp: "event", "event.date >= now" | sort: 'date' %}
-      
-      {%- if upcoming_events.size > 0 -%}
+      {% if site.paginate %}
+        {% assign posts = paginator.posts %}
+      {% else %}
+        {% assign posts = site.posts %}
+      {% endif %}
+
+      {%- if posts.size > 0 -%}
         <ul class="post-list">
           {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
-          {%- for event in upcoming_events -%}
+          {%- for post in posts -%}
           <li>
-            <span class="post-meta">
-              {{ event.date | date: date_format }}
-              {%- if event.location -%}
-                • {{ event.location }}
-              {%- endif -%}
-            </span>
+            <span class="post-meta">{{ post.date | date: date_format }}</span>
             <h3>
-              <a class="post-link" href="{{ event.url | relative_url }}">
-                {{ event.title | escape }}
+              <a class="post-link" href="{{ post.url | relative_url }}">
+                {{ post.title | escape }}
               </a>
             </h3>
-            <div class="post-content">
-              {{ event.content | markdownify }}
-            </div>
+            {{ event.content | markdownify | strip_html | truncatewords: 50 }}
           </li>
           {%- endfor -%}
         </ul>
       {%- else -%}
-        <p>No upcoming events scheduled. Check back later!</p>
+        <p>No news posts yet. Check back soon!</p>
       {%- endif -%}
     </div>
 
-    <!-- Past Events Section -->
+    <!-- Events Section -->
     <div>
       <h2 class="section-heading">PAST EVENTS</h2>
-      {% assign past_events = site.events | where_exp: "event", "event.date < now" | sort: 'date' | reverse %}
-      
-      {%- if past_events.size > 0 -%}
+      {% if site.paginate %}
+        {% assign events = paginator.events %}
+      {% else %}
+        {% assign events = site.events %}
+      {% endif %}
+
+      {%- if events.size > 0 -%}
         <ul class="post-list">
-          {%- for event in past_events -%}
+          {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
+          {% assign sorted_events = events | sort: 'date' %}
+          {%- for event in sorted_events -%}
           <li>
             <span class="post-meta">
               {{ event.date | date: date_format }}
@@ -129,14 +126,12 @@ layout: base
                 {{ event.title | escape }}
               </a>
             </h3>
-            <div class="post-content">
-              {{ event.content | markdownify | truncatewords: 50 }}
-            </div>
+            {{ event.content | markdownify | strip_html | truncatewords: 50 }}
           </li>
           {%- endfor -%}
         </ul>
       {%- else -%}
-        <p>No past events to display.</p>
+        <p>No archived events. Check back later!</p>
       {%- endif -%}
     </div>
   </div>
