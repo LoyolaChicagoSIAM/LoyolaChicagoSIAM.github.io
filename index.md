@@ -17,3 +17,8 @@ layout: home
 
 
 
+<div style="position: fixed; bottom: 30px; left: 30px;">
+  <a href="https://www.instagram.com//siam_luc" target="_blank">
+    <img src="/assets/Instagram_icon.png" alt="Instagram" width="40">
+  </a>
+</div>
