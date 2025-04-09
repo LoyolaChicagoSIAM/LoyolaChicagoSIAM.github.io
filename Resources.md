@@ -16,4 +16,4 @@ Your professor’s or TA’s office hours are a great place to get help and ask 
 
 For more information about SIAM at the national level: <https://www.siam.org/programs-initiatives/programs/>
 
-
+For more information about membership benefits: [Click Here](assets/student_info_ppt.pdf)
