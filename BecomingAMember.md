@@ -10,6 +10,6 @@ Click [here](https://www.siam.org/membership/individual-membership/) to join SIA
 
 Don't forget to also sign for the student chapter email list:
 
-![Email List}](https://forms.office.com/r/8UxrDy3mSi)
+![Email List](https://forms.office.com/r/8UxrDy3mSi)
 
 
