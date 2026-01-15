@@ -2,24 +2,22 @@
 layout: base
 ---
 
-<style type="text/css">
-    .container {
-        display: grid; 
-        grid-template-columns:  1fr 1fr;
-        grid-gap: 40px; 
-        padding-top: 4em;
-    }
-</style>
-
-
-
 <div class="home">
   {%- if page.title -%}
     <h1 class="page-heading">{{ page.title }}</h1>
   {%- endif -%}
 
-  {{ content }}
-
+  <!-- Hero Section -->
+  <section class="hero-section">
+    <div class="hero-logos">
+      <img src="/assets/teal-siamlogo.png" alt="SIAM Logo">
+      <img src="/assets/loyola_logo.jpg" alt="Loyola University Chicago Logo">
+    </div>
+    <h1>Welcome to Loyola University Chicago's SIAM Chapter!</h1>
+    <p class="hero-tagline">
+      The Society for Industrial and Applied Mathematics (SIAM) Chapter at Loyola University Chicago is a student-led organization dedicated to promoting applied mathematics and computational science. Our mission is to foster collaboration between students, faculty, and industry professionals while exploring real-world applications of mathematics.
+    </p>
+  </section>
 
   {% if site.paginate %}
     {% assign posts = paginator.posts %}
@@ -27,102 +25,99 @@ layout: base
     {% assign posts = site.posts %}
   {% endif %}
 
- {% if site.paginate %}
-    {% assign  events = paginator.events %}
+  {% if site.paginate %}
+    {% assign events = paginator.events %}
   {% else %}
-    {% assign events = site.events%}
+    {% assign events = site.events %}
   {% endif %}
 
-  <div class="container">
-	<div>
-  {%- if posts.size > 0 -%}
-    {%- if page.list_title -%}
-      <h2 class="post-list-heading">{{ page.list_title }}</h2>
-    {%- endif -%}
-    <ul class="post-list">
-      {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
-      {%- for post in posts -%}
-      <li>
-        <span class="post-meta">{{ post.date | date: date_format }}</span>
-        <h3>
-          <a class="post-link" href="{{ post.url | relative_url }}">
-            {{ post.title | escape }}
-          </a>
-        </h3>
-        {%- if site.show_excerpts -%}
-          {{ post.excerpt }}
-        {%- endif -%}
-      </li>
-      {%- endfor -%}
-    </ul>
+  <!-- Two Column Grid for Posts and Events -->
+  <div class="two-column-grid">
+    <!-- Posts Column -->
+    <div>
+      <h2 class="section-heading">Recent News</h2>
+      {%- if posts.size > 0 -%}
+        <div class="events-grid">
+          {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
+          {%- for post in posts -%}
+          <article class="event-card">
+            <span class="event-date">{{ post.date | date: date_format }}</span>
+            <h3 class="event-title">
+              <a href="{{ post.url | relative_url }}">{{ post.title | escape }}</a>
+            </h3>
+            {%- if site.show_excerpts -%}
+              <p class="event-excerpt">{{ post.excerpt | strip_html | truncatewords: 30 }}</p>
+            {%- endif -%}
+          </article>
+          {%- endfor -%}
+        </div>
 
-    {% if site.paginate %}
-      <div class="pager">
-        <ul class="pagination">
-        {%- if paginator.previous_page %}
-          <li><a href="{{ paginator.previous_page_path | relative_url }}" class="previous-page">{{ paginator.previous_page }}</a></li>
-        {%- else %}
-          <li><div class="pager-edge">•</div></li>
+        {% if site.paginate %}
+          <div class="pager">
+            <ul class="pagination">
+            {%- if paginator.previous_page %}
+              <li><a href="{{ paginator.previous_page_path | relative_url }}" class="previous-page">{{ paginator.previous_page }}</a></li>
+            {%- else %}
+              <li><div class="pager-edge">&#8226;</div></li>
+            {%- endif %}
+              <li><div class="current-page">{{ paginator.page }}</div></li>
+            {%- if paginator.next_page %}
+              <li><a href="{{ paginator.next_page_path | relative_url }}" class="next-page">{{ paginator.next_page }}</a></li>
+            {%- else %}
+              <li><div class="pager-edge">&#8226;</div></li>
+            {%- endif %}
+            </ul>
+          </div>
         {%- endif %}
-          <li><div class="current-page">{{ paginator.page }}</div></li>
-        {%- if paginator.next_page %}
-          <li><a href="{{ paginator.next_page_path | relative_url }}" class="next-page">{{ paginator.next_page }}</a></li>
-        {%- else %}
-          <li><div class="pager-edge">•</div></li>
+      {%- endif -%}
+    </div>
+
+    <!-- Events Column -->
+    <div>
+      <h2 class="section-heading">Upcoming Events</h2>
+      {%- if events.size > 0 -%}
+        <div class="events-grid">
+          {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
+          {% assign sorted_events = events | sort: 'date' | reverse %}
+          {%- for event in sorted_events -%}
+          <article class="event-card">
+            <span class="event-date">{{ event.date | date: date_format }}</span>
+            {%- if event.location -%}
+              <span class="event-location">{{ event.location }}</span>
+            {%- endif -%}
+            <h3 class="event-title">
+              <a href="{{ event.url | relative_url }}">{{ event.title | escape }}</a>
+            </h3>
+            <p class="event-excerpt">{{ event.content | markdownify | strip_html | truncatewords: 50 }}</p>
+          </article>
+          {%- endfor -%}
+        </div>
+
+        {% if site.paginate %}
+          <div class="pager">
+            <ul class="pagination">
+            {%- if paginator.previous_page %}
+              <li><a href="{{ paginator.previous_page_path | relative_url }}" class="previous-page">{{ paginator.previous_page }}</a></li>
+            {%- else %}
+              <li><div class="pager-edge">&#8226;</div></li>
+            {%- endif %}
+              <li><div class="current-page">{{ paginator.page }}</div></li>
+            {%- if paginator.next_page %}
+              <li><a href="{{ paginator.next_page_path | relative_url }}" class="next-page">{{ paginator.next_page }}</a></li>
+            {%- else %}
+              <li><div class="pager-edge">&#8226;</div></li>
+            {%- endif %}
+            </ul>
+          </div>
         {%- endif %}
-        </ul>
-      </div>
-    {%- endif %}
-
-  {%- endif -%}
-
-	</div>
-	<div>
-	 {%- if events.size > 0 -%}
-    {%- if page.list_title -%}
-      <h2 class="post-list-heading">{{ page.list_title }}</h2>
-    {%- endif -%}
-    <ul class="post-list">
-      {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
-      {% assign sorted_events = events | sort: 'date' | reverse %}
-      {%- for event in sorted_events -%}
-      <li>
-	      	<span class="post-meta">
-		      	{{ event.date | date: date_format }} 
-			{%- if event.location -%}
-				&nbsp- {{ event.location }} 
-			{%- endif -%}
-	      	</span> 
-        <h3>
-          <a class="post-link" href="{{ event.url | relative_url }}">
-            {{ event.title | escape }}
-          </a>
-        </h3>
-	{{ event.content | markdownify | strip_html | truncatewords: 50 }}
-      </li>
-      {%- endfor -%}
-    </ul>
-
-    {% if site.paginate %}
-      <div class="pager">
-        <ul class="pagination">
-        {%- if paginator.previous_page %}
-          <li><a href="{{ paginator.previous_page_path | relative_url }}" class="previous-page">{{ paginator.previous_page }}</a></li>
-        {%- else %}
-          <li><div class="pager-edge">•</div></li>
-        {%- endif %}
-          <li><div class="current-page">{{ paginator.page }}</div></li>
-        {%- if paginator.next_page %}
-          <li><a href="{{ paginator.next_page_path | relative_url }}" class="next-page">{{ paginator.next_page }}</a></li>
-        {%- else %}
-          <li><div class="pager-edge">•</div></li>
-        {%- endif %}
-        </ul>
-      </div>
-    {%- endif %}
-
-  {%- endif -%}
-
+      {%- endif -%}
+    </div>
   </div>
 
+  <!-- Instagram Floating Button -->
+  <div class="social-float">
+    <a href="https://www.instagram.com/siam_luc" target="_blank" rel="noopener">
+      <img src="/assets/Instagram_icon.png" alt="Follow us on Instagram">
+    </a>
+  </div>
 </div>

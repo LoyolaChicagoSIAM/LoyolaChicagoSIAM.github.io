@@ -1,0 +1,696 @@
+---
+---
+
+// Import Minima's base styles first
+@import "minima";
+
+// ============================================
+// CUSTOM VARIABLES
+// ============================================
+$siam-teal: #008080;
+$loyola-maroon: #8c1515;
+$siam-blue: #0066A1;
+$dark-slate: #2c3e50;
+$light-gray: #f8f9fa;
+$medium-gray: #6c757d;
+$border-gray: #e9ecef;
+
+// ============================================
+// TYPOGRAPHY ENHANCEMENTS
+// ============================================
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  color: $dark-slate;
+  line-height: 1.7;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 700;
+  color: $dark-slate;
+  letter-spacing: -0.02em;
+}
+
+// ============================================
+// NAVIGATION STYLING
+// ============================================
+.site-header {
+  background: linear-gradient(135deg, $siam-teal 0%, darken($siam-teal, 10%) 100%);
+  border-top: 4px solid $loyola-maroon;
+  border-bottom: none;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+
+  .wrapper {
+    max-width: 1200px;
+  }
+}
+
+.site-title {
+  color: white !important;
+  font-weight: 700;
+  font-size: 1.5rem;
+  letter-spacing: -0.01em;
+
+  &:hover {
+    text-decoration: none;
+    opacity: 0.9;
+  }
+
+  &:visited {
+    color: white !important;
+  }
+}
+
+.site-nav {
+  .page-link {
+    color: rgba(255, 255, 255, 0.9);
+    font-weight: 500;
+    padding: 8px 16px;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+
+    &:hover {
+      color: white;
+      background: rgba(255, 255, 255, 0.15);
+      text-decoration: none;
+    }
+  }
+
+  // Mobile menu styling
+  @media screen and (max-width: 600px) {
+    background: $siam-teal;
+    border-radius: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+
+    .page-link {
+      color: white;
+      margin-left: 0;
+    }
+
+    .menu-icon > svg path {
+      fill: white;
+    }
+  }
+}
+
+// ============================================
+// HERO SECTION (Homepage)
+// ============================================
+.hero-section {
+  background: linear-gradient(135deg, $siam-teal 0%, $siam-blue 100%);
+  padding: 60px 30px;
+  text-align: center;
+  color: white;
+  border-radius: 16px;
+  margin-bottom: 40px;
+  box-shadow: 0 10px 40px rgba(0, 128, 128, 0.25);
+
+  .hero-logos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    margin-bottom: 30px;
+    flex-wrap: wrap;
+
+    img {
+      max-width: 140px;
+      height: auto;
+      background: white;
+      padding: 15px;
+      border-radius: 12px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+      transition: transform 0.3s ease;
+
+      &:hover {
+        transform: translateY(-5px);
+      }
+    }
+  }
+
+  h1 {
+    color: white;
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+
+  .hero-tagline {
+    font-size: 1.15rem;
+    opacity: 0.95;
+    max-width: 750px;
+    margin: 0 auto;
+    line-height: 1.8;
+  }
+}
+
+// ============================================
+// CARD STYLING (Officers, Events)
+// ============================================
+.card {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+  transition: all 0.3s ease;
+  border: 1px solid $border-gray;
+
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.12);
+  }
+}
+
+// Officer Cards
+.officer-card {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+  transition: all 0.3s ease;
+  border: 1px solid $border-gray;
+
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.12);
+  }
+
+  .officer-image {
+    width: 100%;
+    height: 280px;
+    object-fit: cover;
+    border-bottom: 4px solid $siam-teal;
+  }
+
+  .officer-content {
+    padding: 25px;
+
+    h3 {
+      color: $siam-teal;
+      font-size: 0.95rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      margin-bottom: 10px;
+      margin-top: 0;
+    }
+
+    .officer-name {
+      color: $dark-slate;
+      font-size: 1.4rem;
+      font-weight: 700;
+      margin-bottom: 10px;
+    }
+
+    .officer-email {
+      color: $siam-blue;
+      font-size: 0.9rem;
+      text-decoration: none;
+      display: inline-block;
+      transition: color 0.2s ease;
+
+      &:hover {
+        color: $loyola-maroon;
+      }
+    }
+
+    .officer-bio {
+      margin-top: 15px;
+      color: $medium-gray;
+      font-size: 0.95rem;
+      line-height: 1.6;
+
+      p {
+        margin: 0;
+      }
+    }
+  }
+}
+
+// Event Cards
+.event-card {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  padding: 25px;
+  border-left: 4px solid $siam-teal;
+  transition: all 0.3s ease;
+
+  &:hover {
+    transform: translateX(5px);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+  }
+
+  .event-date {
+    display: inline-block;
+    background: linear-gradient(135deg, $siam-teal, $siam-blue);
+    color: white;
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    margin-bottom: 12px;
+  }
+
+  .event-location {
+    color: $medium-gray;
+    font-size: 0.9rem;
+    margin-left: 10px;
+  }
+
+  .event-title {
+    font-size: 1.25rem;
+    margin-bottom: 10px;
+    margin-top: 10px;
+
+    a {
+      color: $dark-slate;
+      text-decoration: none;
+      transition: color 0.2s ease;
+
+      &:hover {
+        color: $siam-teal;
+      }
+    }
+  }
+
+  .event-excerpt {
+    color: $medium-gray;
+    line-height: 1.6;
+    margin: 0;
+  }
+}
+
+// ============================================
+// GRID LAYOUTS
+// ============================================
+.officers-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 30px;
+  padding: 20px 0;
+}
+
+.events-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+}
+
+.two-column-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr;
+  }
+}
+
+// ============================================
+// SECTION HEADINGS
+// ============================================
+.section-heading {
+  background: linear-gradient(135deg, $siam-teal 0%, $siam-blue 100%);
+  color: white;
+  padding: 12px 24px;
+  border-radius: 8px;
+  margin: 40px 0 25px 0;
+  font-size: 1.15rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  box-shadow: 0 4px 15px rgba(0, 128, 128, 0.25);
+  display: inline-block;
+}
+
+// ============================================
+// BUTTONS AND LINKS
+// ============================================
+.btn-primary {
+  display: inline-block;
+  background: linear-gradient(135deg, $siam-teal 0%, $siam-blue 100%);
+  color: white;
+  padding: 12px 28px;
+  border-radius: 8px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(0, 128, 128, 0.3);
+
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0, 128, 128, 0.4);
+    color: white;
+  }
+}
+
+// Link styling
+a {
+  color: $siam-blue;
+  transition: color 0.2s ease;
+
+  &:hover {
+    color: $siam-teal;
+  }
+
+  &:visited {
+    color: darken($siam-blue, 10%);
+  }
+}
+
+// ============================================
+// FOOTER STYLING
+// ============================================
+.site-footer {
+  background: $dark-slate;
+  color: rgba(255, 255, 255, 0.8);
+  border-top: 4px solid $siam-teal;
+  padding: 40px 0;
+
+  .footer-heading {
+    color: white;
+    font-weight: 600;
+  }
+
+  .footer-col-wrapper {
+    color: rgba(255, 255, 255, 0.7);
+  }
+
+  .contact-list,
+  .social-media-list {
+    li {
+      color: rgba(255, 255, 255, 0.7);
+    }
+  }
+
+  a {
+    color: rgba(255, 255, 255, 0.8);
+
+    &:hover {
+      color: lighten($siam-teal, 20%);
+    }
+
+    &:visited {
+      color: rgba(255, 255, 255, 0.8);
+    }
+  }
+
+  .social-media-list {
+    .svg-icon {
+      fill: rgba(255, 255, 255, 0.7);
+    }
+
+    li:hover .svg-icon {
+      fill: lighten($siam-teal, 20%);
+    }
+  }
+}
+
+// ============================================
+// PAGE CONTENT STYLING
+// ============================================
+.page-content {
+  padding-top: 40px;
+  padding-bottom: 60px;
+
+  .wrapper {
+    max-width: 1100px;
+  }
+}
+
+.page-heading, .post-title {
+  color: $dark-slate;
+  font-size: 2.2rem;
+  margin-bottom: 30px;
+  position: relative;
+  padding-bottom: 15px;
+
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 60px;
+    height: 4px;
+    background: linear-gradient(135deg, $siam-teal 0%, $siam-blue 100%);
+    border-radius: 2px;
+  }
+}
+
+// ============================================
+// POST/EVENT LIST STYLING (default minima lists)
+// ============================================
+.post-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+
+  > li {
+    margin-bottom: 25px;
+    padding: 20px 25px;
+    background: white;
+    border-radius: 12px;
+    border-left: 4px solid $siam-teal;
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.06);
+    transition: all 0.3s ease;
+
+    &:hover {
+      box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+      transform: translateX(5px);
+    }
+  }
+
+  .post-meta {
+    color: $medium-gray;
+    font-size: 0.9rem;
+    margin-bottom: 8px;
+  }
+
+  h3 {
+    margin: 8px 0;
+  }
+
+  .post-link {
+    color: $dark-slate;
+    font-size: 1.2rem;
+    font-weight: 600;
+    text-decoration: none;
+
+    &:hover {
+      color: $siam-teal;
+    }
+
+    &:visited {
+      color: $dark-slate;
+    }
+  }
+}
+
+// ============================================
+// IMAGE STYLING
+// ============================================
+.post-content img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  margin: 20px 0;
+}
+
+// ============================================
+// INSTAGRAM FLOATING BUTTON
+// ============================================
+.social-float {
+  position: fixed;
+  bottom: 30px;
+  left: 30px;
+  z-index: 1000;
+
+  a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+    border-radius: 50%;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
+    transition: all 0.3s ease;
+
+    &:hover {
+      transform: scale(1.1);
+      box-shadow: 0 6px 25px rgba(0, 0, 0, 0.35);
+    }
+
+    img {
+      width: 26px;
+      height: 26px;
+      filter: brightness(0) invert(1);
+    }
+  }
+}
+
+// ============================================
+// ABOUT PAGE - GOALS LIST
+// ============================================
+.page-content {
+  ol {
+    list-style: none;
+    padding: 0;
+    counter-reset: goals;
+
+    li {
+      counter-increment: goals;
+      padding: 18px 20px 18px 65px;
+      margin-bottom: 12px;
+      background: $light-gray;
+      border-radius: 10px;
+      position: relative;
+      transition: all 0.3s ease;
+
+      &::before {
+        content: counter(goals);
+        position: absolute;
+        left: 18px;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 34px;
+        height: 34px;
+        background: linear-gradient(135deg, $siam-teal, $siam-blue);
+        color: white;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: 700;
+        font-size: 0.9rem;
+      }
+
+      &:hover {
+        background: white;
+        box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+      }
+    }
+  }
+}
+
+// ============================================
+// EVENT META STYLING
+// ============================================
+.event-meta {
+  margin-bottom: 30px;
+
+  .event-date {
+    display: inline-block;
+    background: linear-gradient(135deg, $siam-teal, $siam-blue);
+    color: white;
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    font-weight: 600;
+  }
+
+  .event-location {
+    color: $medium-gray;
+    margin-left: 15px;
+    font-size: 0.95rem;
+  }
+}
+
+// ============================================
+// ANIMATIONS
+// ============================================
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in {
+  animation: fadeInUp 0.5s ease forwards;
+}
+
+// Stagger animation for cards
+.officers-grid .officer-card,
+.events-grid .event-card {
+  opacity: 0;
+  animation: fadeInUp 0.5s ease forwards;
+
+  @for $i from 1 through 10 {
+    &:nth-child(#{$i}) {
+      animation-delay: #{$i * 0.1}s;
+    }
+  }
+}
+
+// ============================================
+// RESPONSIVE ADJUSTMENTS
+// ============================================
+@media (max-width: 768px) {
+  .hero-section {
+    padding: 40px 20px;
+    border-radius: 12px;
+
+    h1 {
+      font-size: 1.8rem;
+    }
+
+    .hero-logos img {
+      max-width: 100px;
+      padding: 10px;
+    }
+
+    .hero-tagline {
+      font-size: 1rem;
+    }
+  }
+
+  .officers-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .page-heading, .post-title {
+    font-size: 1.8rem;
+  }
+
+  .section-heading {
+    font-size: 1rem;
+    padding: 10px 18px;
+  }
+
+  .officer-card .officer-image {
+    height: 220px;
+  }
+}
+
+@media (max-width: 480px) {
+  .social-float {
+    bottom: 20px;
+    left: 20px;
+
+    a {
+      width: 45px;
+      height: 45px;
+
+      img {
+        width: 22px;
+        height: 22px;
+      }
+    }
+  }
+
+  .hero-section {
+    padding: 30px 15px;
+
+    .hero-logos {
+      gap: 15px;
+
+      img {
+        max-width: 80px;
+      }
+    }
+  }
+}
