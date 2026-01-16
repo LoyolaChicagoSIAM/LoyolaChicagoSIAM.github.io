@@ -1,9 +1,9 @@
 ---
 name: Sarah Riaz
-position: Treasurer
-image: /assets/officers/IMG_SARAH.jpeg
+position: President
+image: /assets/officers/new_IMG_SARAH.jpeg
 contact: sriaz@luc.edu
 status: active
 ---
 
-Third year student majoring in Statistics and Mathematics.
+I am a fourth-year student majoring in Statistics and minoring in Mathematics and Data Science. I do research in Combinatorics and Logic.
