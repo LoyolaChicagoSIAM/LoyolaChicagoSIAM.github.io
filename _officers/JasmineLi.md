@@ -6,4 +6,4 @@ contact: jli44@luc.edu
 status: active
 ---
 
-Add bio here.Jasmine is in California! Fun
+Add bio here.
