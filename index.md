@@ -12,5 +12,13 @@ layout: home
     <img src="/assets/teal-siamlogo.png" width="1200" style="padding-left: 20px; padding-right: 20px; padding-bottom: 20px; display: block;">
     <img src="/assets/loyola_logo.jpg" width="1200" style="padding-left: 20px; padding-right: 20px; display: block;">
   </div>
-</div>
+  <div>
     The Society for Industrial and Applied Mathematics (SIAM) Chapter at Loyola University Chicago is a student-led organization dedicated to promoting applied mathematics and computational science. Our mission is to foster collaboration between students, faculty, and industry professionals while exploring real-world applications of mathematics.
+
+
+
+<div style="position: fixed; bottom: 30px; left: 30px;">
+  <a href="https://www.instagram.com//siam_luc" target="_blank">
+    <img src="/assets/Instagram_icon.png" alt="Instagram" width="40">
+  </a>
+</div>
