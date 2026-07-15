@@ -6,4 +6,4 @@ contact: jli44@luc.edu
 status: active
 ---
 
-Add bio here.
+I am a third year biomedical engineering 
