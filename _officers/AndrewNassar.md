@@ -6,5 +6,5 @@ contact: anassar3@luc.edu
 status: active
 ---
 
-Andrew is a junior majoring in Applied Mathematics with a minor in Statistics. He's done research in evolutionary game theory and spatial dynamics.
+Andrew is a third-year student majoring in Applied Mathematics with a minor in Statistics. He's done research in evolutionary game theory and spatial dynamics.
 
