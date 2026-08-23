@@ -1,7 +1,7 @@
 ---
 name: Andrew Nassar
 position: President
-image: /assets/officers/new_IMG_ANDREW.jpeg
+image: /assets/officers/new_IMG_ANDREW.JPEG
 contact: anassar3@luc.edu 
 status: active
 ---
