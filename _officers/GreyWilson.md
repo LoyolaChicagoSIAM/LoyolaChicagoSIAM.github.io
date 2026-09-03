@@ -1,5 +1,5 @@
 ---
-name: Grey Wilson
+name: Grey Willson
 position: Treasurer
 image: 
 contact: swillson@luc.edu 
